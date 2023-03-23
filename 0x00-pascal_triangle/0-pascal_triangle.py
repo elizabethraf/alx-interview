@@ -12,6 +12,6 @@ def pascal_triangle(n):
             prev = [0] + tree[-1] + [0]
             newlist = []
             for b in range(len(tree[-1]) + 1):
-                newlist.append(prev[b] + prev[b+1])
+                newlist.append(prev[b] + prev[b + 1])
             tree.append(newlist)
     return tree
