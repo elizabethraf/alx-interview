@@ -4,8 +4,8 @@
 
 def canUnlockAll(boxes):
     """Define unlock array of boxes"""
-    unlocked = set([0]
-    key = set(boxes[0]
+    unlocked = set([0])
+    key = set(boxes[0])
     while True:
         next_box = None
         for i in range(len(boxes)):
@@ -18,7 +18,7 @@ def canUnlockAll(boxes):
             unlocked.add(next_box)
             key.update(boxes[next_box])
 
-    if len(unlocked) == len(boxes)
-        return true
+    if len(unlocked) == len(boxes):
+        return False
     else:
-    return false
+        return True
