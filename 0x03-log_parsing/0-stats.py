@@ -13,7 +13,6 @@ def print_metrics(total_size, status_code_counts):
 
 def process_line(line, total_size, status_code_counts):
     parts = line.split()
-    print(parts)
     if len(parts) != 9:
         return total_size, status_code_counts
     ip_address, _, _, timestamp, _, method, path, status_code, filesize = parts
@@ -23,7 +22,6 @@ def process_line(line, total_size, status_code_counts):
     except ValueError:
         return total_size, status_code_counts
     total_size += file_size
-    print(status_code_counts)
     status_code_counts[status_code] += 1
     return total_size, status_code_counts
 
