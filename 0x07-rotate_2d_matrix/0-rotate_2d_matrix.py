@@ -12,5 +12,5 @@ def rotate_2d_matrix(matrix):
 
     for b in range(n):
         for j in range(n // 2):
-            matrix[b][j], matrix[b][n - j - 1] = matrix[b] \
-               [n - j - 1], matrix[b][j]
+            matrix[b][j], matrix[b][n - j - 1] \
+                = matrix[b][n - j - 1], matrix[b][j]
